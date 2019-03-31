@@ -52,16 +52,11 @@
     <dependency>
       <groupId>be.yildiz-games</groupId>
       <artifactId>common-geometry</artifactId>
-      <version>1.0.4</version>
+      <version>1.0.6</version>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
