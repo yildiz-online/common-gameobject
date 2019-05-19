@@ -84,4 +84,6 @@ public interface GameMaterialization extends Movable {
     void delete();
 
     void sleep(boolean b);
+
+
 }

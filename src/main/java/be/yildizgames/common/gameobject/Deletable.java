@@ -26,6 +26,7 @@ package be.yildizgames.common.gameobject;
 
 /**
  * This object must be manually deleted.
+ *
  * @author Grégory Van den Borre
  */
 @FunctionalInterface
