@@ -27,6 +27,8 @@ package be.yildizgames.common.gameobject;
 import be.yildizgames.common.model.EntityId;
 import be.yildizgames.common.model.EntityIdentifiable;
 
+import java.util.Objects;
+
 /**
  * Contains the result of a collision between 2 objects.
  *
@@ -46,25 +48,21 @@ public final class CollisionResult {
 
     public CollisionResult(final EntityId e1, final EntityId e2) {
         super();
+        Objects.requireNonNull(e1);
+        Objects.requireNonNull(e2);
         this.object1 = e1;
         this.object2 = e2;
-        assert this.invariant();
     }
 
     public boolean contains(final EntityIdentifiable entity) {
-        assert entity != null;
         return this.contains(entity.getId());
     }
 
     public boolean contains(final EntityIdentifiable entity, final EntityIdentifiable entity2) {
-        assert entity != null;
-        assert entity2 != null;
         return this.contains(entity.getId(), entity2.getId());
     }
 
     public boolean containsAndNot(final EntityIdentifiable entity, final EntityIdentifiable entity2) {
-        assert entity != null;
-        assert entity2 != null;
         return this.containsAndNot(entity.getId(), entity2.getId());
     }
 
@@ -75,19 +73,19 @@ public final class CollisionResult {
      * @return <code>true</code> if the provided id is implied in this collision.
      */
     public boolean contains(final EntityId id) {
-        assert id != null;
+        Objects.requireNonNull(id);
         return this.object1.equals(id) || this.object2.equals(id);
     }
 
     public boolean contains(final EntityId id, final EntityId id2) {
-        assert id != null;
-        assert id2 != null;
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(id2);
         return (this.object1.equals(id) && this.object2.equals(id2)) || (this.object2.equals(id) && this.object1.equals(id2));
     }
 
     public boolean containsAndNot(final EntityId id, final EntityId id2) {
-        assert id != null;
-        assert id2 != null;
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(id2);
 
         return (this.object1.equals(id) && !this.object2.equals(id2))
                 || (!this.object1.equals(id2) && this.object2.equals(id))
@@ -119,9 +117,5 @@ public final class CollisionResult {
     @Override
     public final String toString() {
         return "Collision: " + this.object1 + " : " + this.object2;
-    }
-
-    private boolean invariant() {
-        return this.object1 != null && this.object2 != null;
     }
 }

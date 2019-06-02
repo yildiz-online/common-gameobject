@@ -59,12 +59,12 @@ public class CollisionResultTest {
 
         @Test
         public void withObject1Null() {
-            assertThrows(AssertionError.class, () -> new CollisionResult(null, id2));
+            assertThrows(NullPointerException.class, () -> new CollisionResult(null, id2));
         }
 
         @Test
         public void withObject2Null() {
-            assertThrows(AssertionError.class, () -> new CollisionResult(id1, null));
+            assertThrows(NullPointerException.class, () -> new CollisionResult(id1, null));
         }
     }
 
@@ -104,37 +104,37 @@ public class CollisionResultTest {
         @Test
         public void withNull() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.contains((EntityId)null));
+            assertThrows(NullPointerException.class, () -> r.contains((EntityId)null));
         }
 
         @Test
         public void withNullParamOne() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.contains(null, id2));
+            assertThrows(NullPointerException.class, () -> r.contains(null, id2));
         }
 
         @Test
         public void withNullParamTwo() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.contains(id1, null));
+            assertThrows(NullPointerException.class, () -> r.contains(id1, null));
         }
 
         @Test
         public void withNullIdentifiable() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.contains((EntityIdentifiable) null));
+            assertThrows(NullPointerException.class, () -> r.contains((EntityIdentifiable) null));
         }
 
         @Test
         public void withNullIdentifiableParamOne() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.contains(null, enid2));
+            assertThrows(NullPointerException.class, () -> r.contains(null, enid2));
         }
 
         @Test
         public void withNullIdentifiableParamTwo() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.contains(enid1, null));
+            assertThrows(NullPointerException.class, () -> r.contains(enid1, null));
         }
 
     }
@@ -156,13 +156,13 @@ public class CollisionResultTest {
         @Test
         public void withParamOneNull() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.containsAndNot(null, enid2));
+            assertThrows(NullPointerException.class, () -> r.containsAndNot(null, enid2));
         }
 
         @Test
         public void withParamTwoNull() {
             CollisionResult r = givenACollisionResult();
-            assertThrows(AssertionError.class, () -> r.containsAndNot(enid1, null));
+            assertThrows(NullPointerException.class, () -> r.containsAndNot(enid1, null));
         }
 
         @Test
