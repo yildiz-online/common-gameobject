@@ -205,47 +205,47 @@ public class CollisionResultTest {
         @Test
         public void sameInstance() {
             CollisionResult r = givenACollisionResult();
-            assertTrue(r.equals(r));
+            assertEquals(r, r);
         }
 
         @Test
         public void sameObject() {
             CollisionResult r = givenACollisionResult();
             CollisionResult r2 = givenACollisionResult();
-            assertTrue(r.equals(r2));
+            assertEquals(r, r2);
         }
 
         @Test
         public void differentOrder() {
             CollisionResult r = givenACollisionResult();
             CollisionResult r2 = new CollisionResult(id2, id1);
-            assertTrue(r.equals(r2));
+            assertEquals(r, r2);
         }
 
         @Test
         public void withNull() {
             CollisionResult r = givenACollisionResult();
-            assertFalse(r.equals(null));
+            assertNotEquals(null, r);
         }
 
         @Test
         public void differentObject() {
             CollisionResult r = givenACollisionResult();
             CollisionResult r2 = new CollisionResult(id1, EntityId.WORLD);
-            assertFalse(r.equals(r2));
+            assertNotEquals(r, r2);
         }
 
         @Test
         public void differentObjectParamTwo() {
             CollisionResult r = givenACollisionResult();
             CollisionResult r2 = new CollisionResult(EntityId.WORLD, id2);
-            assertFalse(r.equals(r2));
+            assertNotEquals(r, r2);
         }
 
         @Test
         public void differentType() {
             CollisionResult r = givenACollisionResult();
-            assertFalse(r.equals("ok"));
+            assertNotEquals("ok", r);
         }
     }
 
