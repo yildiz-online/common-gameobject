@@ -38,6 +38,11 @@
     <developerConnection>scm:git:https://bitbucket.org/yildiz-engine-team/common-gameobject</developerConnection>
     <url>https://bitbucket.org/yildiz-engine-team/common-gameobject</url>
   </scm>
+
+  <properties>
+    <java.version>11</java.version>
+  </properties>
+
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent</artifactId>
