@@ -26,7 +26,7 @@
   <modelVersion>4.0.0</modelVersion>
   <name>Yildiz Common Game Object</name>
   <description>Common library for the yildiz project, contains game object classes.</description>
-  <url>https://bitbucket.org/yildiz-engine-team/common-gameobject</url>
+  <url>https://github.com/yildiz-online/common-gameobject</url>
 
   <artifactId>common-gameobject</artifactId>
   <version>1.0.9-SNAPSHOT</version>
@@ -34,9 +34,9 @@
   <packaging>jar</packaging>
   <inceptionYear>2017</inceptionYear>
   <scm>
-    <connection>scm:git:https://bitbucket.org/yildiz-engine-team/common-gameobject</connection>
-    <developerConnection>scm:git:https://bitbucket.org/yildiz-engine-team/common-gameobject</developerConnection>
-    <url>https://bitbucket.org/yildiz-engine-team/common-gameobject</url>
+    <connection>scm:git:https://github.com/yildiz-online/common-gameobject</connection>
+    <developerConnection>scm:git:https://github.com/yildiz-online/common-gameobject</developerConnection>
+    <url>https://github.com/yildiz-online/common-gameobject</url>
   </scm>
 
   <properties>
