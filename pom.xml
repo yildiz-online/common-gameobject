@@ -39,14 +39,10 @@
     <url>https://github.com/yildiz-online/common-gameobject</url>
   </scm>
 
-  <properties>
-    <java.version>11</java.version>
-  </properties>
-
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent</artifactId>
-    <version>4.0.2</version>
+    <version>5.0.1</version>
   </parent>
   <dependencies>
     <dependency>
