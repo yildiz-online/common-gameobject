@@ -22,7 +22,7 @@
  *
  */
 
-module be.yildizgames.common.gameobject {
+open module be.yildizgames.common.gameobject {
     requires be.yildizgames.common.model;
     requires be.yildizgames.common.geometry;
 
